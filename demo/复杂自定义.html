@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>复杂自定义 &mdash; bootstrap_study  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="主题简单定制" href="%E7%AE%80%E5%8D%95%E5%AE%9A%E5%88%B6.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> bootstrap_study
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bootstrap%E4%BB%8B%E7%BB%8D.html">Bootstrap基础知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sphinx%E5%85%A5%E9%97%A8.html">Sphinx快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AESphinx_bootstrap_theme.html">Sphinx Bootstrap Theme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bootswatch.html">Bootswatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bootstrap%E7%89%88%E6%9C%AC.html">Bootstrap版本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%AE%80%E5%8D%95%E5%AE%9A%E5%88%B6.html">主题简单定制</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">复杂自定义</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#html">扩展 HTML 文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#css">扩展 CSS 文件</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">bootstrap_study</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>复杂自定义</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/demo/复杂自定义.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>复杂自定义<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>前一章为简单自定义，在此章将介绍怎样覆盖此Sphinx主题中的任何模板，实现真正的自定义。
+实现复杂自定义可以通过自定义HTML、CSS文件来实现。具体介绍如下。</p>
+<div class="section" id="html">
+<h2>扩展 HTML 文件<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>首先，在自己 <code class="docutils literal notranslate"><span class="pre">source</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">_templates</span></code> 文件夹中添加 <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 文件，如下图所示：</p>
+<blockquote>
+<div><img alt="../_images/layout.png" src="../_images/layout.png" />
+</div></blockquote>
+</li>
+<li><p>随后，在 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中输入 <code class="docutils literal notranslate"><span class="pre">templates_path</span> <span class="pre">=</span> <span class="pre">['_templates']</span></code> 进行配置, 如下图所示：</p>
+<blockquote>
+<div><img alt="../_images/temp.png" src="../_images/temp.png" />
+</div></blockquote>
+</li>
+<li><p>最后，编辑替代文件 <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/</span> <span class="pre">_templates</span> <span class="pre">/</span> <span class="pre">layout.html</span></code> ，下面代码为一个样例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{# 导入布局文件 #}
+{% extends &quot;!layout.html&quot; %}
+
+{# 添加功能，并使用{{super()}}覆盖原有模板,此处功能为自定义脚注标题 #}
+{% block footer %}
+    &lt;h2&gt;我的Bootstrap脚注&lt;/h2&gt;
+    {{ super() }}
+
+{# 添加Banner功能,点击Banner进入我的github主页 #}
+&lt;a href=&quot;https://github.com/djj-djj&quot;
+ class=&quot;visible-desktop hidden-xs&quot;&gt;&lt;img
+ id=&quot;gh-banner&quot;
+ style=&quot;position: absolute; top: 50px; right: 0; border: 0;&quot;
+ src=&quot;https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png&quot;
+ alt=&quot;fork_me_on_github&quot;&gt;&lt;/a&gt;
+&lt;script&gt;
+// Adjust banner height.
+$(function () {
+  var navHeight = $(&quot;.navbar .container&quot;).css(&quot;height&quot;);
+  $(&quot;#gh-banner&quot;).css(&quot;top&quot;, navHeight);
+});
+&lt;/script&gt;
+{% endblock %}
+</pre></div>
+</div>
+</li>
+</ol>
+<p>自定义结果如下图所示：</p>
+<img alt="../_images/footer.png" src="../_images/footer.png" />
+<p>更多的html自定义编写请参考 <a class="reference external" href="https://www.runoob.com/html/html-tutorial.html">HTML 教程</a></p>
+</div>
+<div class="section" id="css">
+<h2>扩展 CSS 文件<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>首先，在自己 <code class="docutils literal notranslate"><span class="pre">source</span></code> 目录下的 <code class="docutils literal notranslate"><span class="pre">_static</span></code> 文件夹中添加 <code class="docutils literal notranslate"><span class="pre">my-styles.css</span></code> 文件，如下图所示：</p>
+<blockquote>
+<div><img alt="../_images/css.png" src="../_images/css.png" />
+</div></blockquote>
+</li>
+<li><p>随后，在conf.py中输入 <code class="docutils literal notranslate"><span class="pre">html_static_path</span> <span class="pre">=</span> <span class="pre">[&quot;</span> <span class="pre">_static&quot;]</span></code> 进行配置, 如下图所示：</p>
+<blockquote>
+<div><img alt="../_images/sta.png" src="../_images/sta.png" />
+</div></blockquote>
+</li>
+<li><p>这里开始需要考虑您的Sphinx的版本问题，若 Sphinx&lt;= 1.5（<em>若Sphinx&gt;1.5直接跳过此步骤，直接执行第4步</em>），您需要在 <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 文件开头处添加以下代码:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{# 导入布局文件 #}
+{% extends &quot;!layout.html&quot; %}
+
+{＃自定义CSS覆盖＃}
+{％set bootswatch_css_custom = [&#39;_static / my-styles.css&#39;]％}
+</pre></div>
+</div>
+</li>
+<li><p>Sphinx版本&gt;1.5的用户不用进行上述操作，而是在conf.py末尾加入:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_stylesheet</span><span class="p">(</span><span class="s2">&quot;my-styles.css&quot;</span><span class="p">)</span>
+<span class="c1">#此处可引入多个CSS文件</span>
+<span class="c1"># app.add_stylesheet(&quot;ANOTHER.css&quot;)</span>
+<span class="c1"># app.add_stylesheet(&quot;AND_ANOTHER.css&quot;)</span>
+</pre></div>
+</div>
+</li>
+<li><p>最后，在 <code class="docutils literal notranslate"><span class="pre">my-styles.css</span></code> 文件中添加自定义内容，以下代码为具体例子:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#此处将导航条名称定义为黄色</span>
+<span class="o">.</span><span class="n">navbar</span><span class="o">-</span><span class="n">default</span> <span class="o">.</span><span class="n">navbar</span><span class="o">-</span><span class="n">brand</span> <span class="p">{</span>
+<span class="n">color</span><span class="p">:</span> <span class="n">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">#此处将页脚背景颜色定义为红色</span>
+<span class="n">footer</span><span class="p">{</span>
+<span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span><span class="n">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<dl>
+<dt>自定义结果如下图所示：</dt><dd><img alt="../_images/cssout.png" src="../_images/cssout.png" />
+</dd>
+</dl>
+<p>更多的CSS文件的自定义编写请参考 <a class="reference external" href="https://www.runoob.com/css/css-tutorial.html">CSS 教程</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="%E7%AE%80%E5%8D%95%E5%AE%9A%E5%88%B6.html" class="btn btn-neutral float-left" title="主题简单定制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, djj
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
