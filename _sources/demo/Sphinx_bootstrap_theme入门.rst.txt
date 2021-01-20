@@ -48,7 +48,7 @@ Windows系统
 
     .. image::  ./img/bootstrap基础显示.png
 
-我们可以看到这个网页并不美观，所以下面我们将学习怎样通过使用Bootswatch主题来对自己的网页进行美化定制。
+我们可以看到这个网页并不美观，所以之后我们将学习怎样对Bootstrap基础模板进行自定义设置。
 
 
 Bootswatch

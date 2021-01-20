@@ -7,16 +7,14 @@ Bootstrap for Technical Writers
 ===========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: -1
    :caption: Contents:
    
    demo/bootstrap介绍.rst
    demo/Sphinx入门.rst
-   demo/安装和配置Sphinx_bootstrap_theme.rst
-   demo/Bootswatch.rst
-   demo/Bootstrap版本.rst
-   demo/简单定制.rst
-   demo/复杂自定义.rst
+   demo/Sphinx_bootstrap_theme入门.rst
+   demo/实现简单自定义.rst
+   demo/实现复杂自定义.rst
    
 
 

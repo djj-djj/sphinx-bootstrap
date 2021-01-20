@@ -39,7 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sphinx Bootstrap Theme" href="%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AESphinx_bootstrap_theme.html" />
+    <link rel="next" title="Sphinx Bootstrap Theme入门" href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html" />
     <link rel="prev" title="Bootstrap基础知识" href="bootstrap%E4%BB%8B%E7%BB%8D.html" /> 
 </head>
 
@@ -98,11 +98,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#id3">往项目中添加内容</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AESphinx_bootstrap_theme.html">Sphinx Bootstrap Theme</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bootswatch.html">Bootswatch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Bootstrap%E7%89%88%E6%9C%AC.html">Bootstrap版本</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E7%AE%80%E5%8D%95%E5%AE%9A%E5%88%B6.html">主题简单定制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E5%A4%8D%E6%9D%82%E8%87%AA%E5%AE%9A%E4%B9%89.html">复杂自定义</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html">Sphinx Bootstrap Theme入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E8%87%AA%E5%AE%9A%E4%B9%89.html">实现简单自定义</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%9E%E7%8E%B0%E5%A4%8D%E6%9D%82%E8%87%AA%E5%AE%9A%E4%B9%89.html">实现复杂自定义</a></li>
 </ul>
 
             
@@ -195,14 +193,14 @@
 <div class="section" id="id2">
 <h2>快速新建项目<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p>在桌面上创建一个文件夹，并命名为 sphinx-demo</p></li>
+<li><p>在桌面上创建一个文件夹，并命名为 <code class="docutils literal notranslate"><span class="pre">sphinx-demo</span></code></p></li>
 <li><p>在Terminal(命令行界面）中浏览至上述文件夹，并运行命令:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
 </pre></div>
 </div>
 </li>
 <li><p>在对话框式的选择中，Y/N的选项，选Y；如果询问配置，直接复制[]中的内容，如[.rst]，则填写.rst</p></li>
-<li><p>新建成功后，则会得到如图所示的文件夹结构:</p>
+<li><p>若成功建立项目，则会得到如图所示的文件夹结构:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
 ├── build
 ├── make.bat
@@ -238,8 +236,12 @@
 </pre></div>
 </div>
 </li>
-<li><p>在Terminal中运行编译命令 <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">source</span> <span class="pre">build</span></code></p></li>
-<li><p>编译成功的话，在 build 文件夹中则有刚才发布的网站,如下所示：</p>
+<li><p>在Terminal中运行编译命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="n">source</span> <span class="n">build</span>
+</pre></div>
+</div>
+</li>
+<li><p>如编译成功，生成的 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 即出现在 <code class="docutils literal notranslate"><span class="pre">\build</span></code> 文件夹中,如下所示：</p>
 <blockquote>
 <div><img alt="../_images/显示.png" src="../_images/显示.png" />
 </div></blockquote>
@@ -256,7 +258,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AESphinx_bootstrap_theme.html" class="btn btn-neutral float-right" title="Sphinx Bootstrap Theme" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html" class="btn btn-neutral float-right" title="Sphinx Bootstrap Theme入门" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="bootstrap%E4%BB%8B%E7%BB%8D.html" class="btn btn-neutral float-left" title="Bootstrap基础知识" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

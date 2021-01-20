@@ -23,14 +23,14 @@ Windows系统
 
 快速新建项目
 ----------------
-#. 在桌面上创建一个文件夹，并命名为 sphinx-demo
+#. 在桌面上创建一个文件夹，并命名为 ``sphinx-demo``
 #. 在Terminal(命令行界面）中浏览至上述文件夹，并运行命令::    
 
         sphinx-quickstart
 
 
 #. 在对话框式的选择中，Y/N的选项，选Y；如果询问配置，直接复制[]中的内容，如[.rst]，则填写.rst
-#. 新建成功后，则会得到如图所示的文件夹结构:: 
+#. 若成功建立项目，则会得到如图所示的文件夹结构:: 
     
         .
         ├── build
@@ -60,9 +60,11 @@ Windows系统
         demo/test.rst
 
 
-#. 在Terminal中运行编译命令 ``sphinx-build -b html source build``
+#. 在Terminal中运行编译命令::
 
-#. 编译成功的话，在 build 文件夹中则有刚才发布的网站,如下所示：
+        sphinx-build -b html source build
+
+#. 如编译成功，生成的 ``index.html`` 即出现在 ``\build`` 文件夹中,如下所示：
 
       .. image::  ./img/显示.png
 

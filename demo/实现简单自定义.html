@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>实现简单自定义 &mdash; bootstrap_study  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="实现复杂自定义" href="%E5%AE%9E%E7%8E%B0%E5%A4%8D%E6%9D%82%E8%87%AA%E5%AE%9A%E4%B9%89.html" />
+    <link rel="prev" title="Sphinx Bootstrap Theme入门" href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> bootstrap_study
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="bootstrap%E4%BB%8B%E7%BB%8D.html">Bootstrap基础知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sphinx%E5%85%A5%E9%97%A8.html">Sphinx快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html">Sphinx Bootstrap Theme入门</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">实现简单自定义</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#logo">徽标Logo定制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">导航条等定制</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%AE%9E%E7%8E%B0%E5%A4%8D%E6%9D%82%E8%87%AA%E5%AE%9A%E4%B9%89.html">实现复杂自定义</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">bootstrap_study</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>实现简单自定义</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/demo/实现简单自定义.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>实现简单自定义<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>简单定制主题即在conf.py中添加 html_theme_options等进行基于模板的简单自定义，如果想进行复杂的自定义请查看下一章节。</p>
+<div class="section" id="logo">
+<h2>徽标Logo定制<a class="headerlink" href="#logo" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>将logo徽标保存在在相对于_static文件目录的路径中</p></li>
+<li><p>并在conf.py文件末尾添加以下代码（此处logo.png对应图片名称）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>html_logo =“ logo.png”
+</pre></div>
+</div>
+</li>
+<li><p>显示效果如下图圈部分：</p>
+<blockquote>
+<div><img alt="../_images/logo.png" src="../_images/logo.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h2>导航条等定制<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>导航条外观的定制的具体定制可以通过在conf.py文件中加入 <code class="docutils literal notranslate"><span class="pre">html_theme_options</span></code> 进行自定义:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+
+   <span class="c1"># 1.设置想要的导航名称:这里设置为：Bootstrap主题测试</span>
+   <span class="s1">&#39;navbar_title&#39;</span><span class="p">:</span> <span class="s2">&quot;Bootstrap导航&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 2.导航条中网站的名字</span>
+   <span class="s1">&#39;navbar_site_name&#39;</span><span class="p">:</span> <span class="s2">&quot;Bootstrap Nav&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 3.可以在导航条中加入以下三种模式的链接形式:</span>
+   <span class="c1">#    (name, page)                 # 网站中一页的连接</span>
+   <span class="c1">#    (name, &quot;/aa/bb&quot;, 1)          # 相对连接</span>
+   <span class="c1">#    (name, &quot;http://example.com&quot;, True) # 绝对网页连接</span>
+   <span class="c1">#这里在导航条中加入百度搜索的按钮，点开会进入百度搜索主页</span>
+   <span class="s1">&#39;navbar_links&#39;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">(</span><span class="s2">&quot;百度搜索&quot;</span><span class="p">,</span> <span class="s2">&quot;https://www.baidu.com/&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+   <span class="p">],</span>
+
+   <span class="c1"># 4.将下一页标题在导航条中显示（默认值：True）</span>
+   <span class="s1">&#39;navbar_sidebarrel&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+
+   <span class="c1"># 5.在导航预览渲染当前页面的目录。（默认值：True）</span>
+   <span class="s1">&#39;navbar_pagenav&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+
+   <span class="c1"># 6.当前页面目录的标签名称。（默认值：“Page”）</span>
+   <span class="c1"># 此处设置为This Page</span>
+   <span class="s1">&#39;navbar_pagenav_name&#39;</span><span class="p">:</span> <span class="s2">&quot;This page&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 7.导航栏选项卡的目录深度。（最小值：1）</span>
+   <span class="c1">#切换为-1可显示所有等级。（此处设置为所有等级）</span>
+   <span class="s1">&#39;globaltoc_depth&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+
+   <span class="c1"># 8.在网站导航预设包含隐藏的目录</span>
+   <span class="c1">#注意：如果为“ false”，则不能混合使用``：hidden：&#39;&#39;和同一页面中的非隐藏“ toctree”指令，否则进行编译会中断。</span>
+   <span class="s1">&#39;globaltoc_includehidden&#39;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 9.navbar类（最小值：“ navbar”）附加到&lt;div&gt;元素。</span>
+   <span class="c1">#对于黑色导航栏，请执行“ navbar navbar-inverse”，此处设置为黑色</span>
+   <span class="s1">&#39;navbar_class&#39;</span><span class="p">:</span> <span class="s2">&quot;navbar navbar-inverse&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 10.将导航栏固定在页面顶部(默认为True）</span>
+   <span class="s1">&#39;navbar_fixed_top&#39;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+
+   <span class="c1"># 11.将Source链接放置的位置</span>
+   <span class="c1"># 默认放置在导航中，也可以选择放置在页脚等位置中(此处放置在页脚）</span>
+   <span class="s1">&#39;source_link_position&#39;</span><span class="p">:</span> <span class="s2">&quot;footer&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>上述设置对应的效果如下图所示：</p>
+<img alt="../_images/效果.png" src="../_images/效果.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="%E5%AE%9E%E7%8E%B0%E5%A4%8D%E6%9D%82%E8%87%AA%E5%AE%9A%E4%B9%89.html" class="btn btn-neutral float-right" title="实现复杂自定义" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Sphinx_bootstrap_theme%E5%85%A5%E9%97%A8.html" class="btn btn-neutral float-left" title="Sphinx Bootstrap Theme入门" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, djj
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
