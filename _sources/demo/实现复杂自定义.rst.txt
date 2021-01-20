@@ -58,14 +58,14 @@
     
     .. image::  ./img/sta.png
 
-#. 这里开始需要考虑您的Sphinx的版本问题，若 Sphinx<= 1.5（*若Sphinx>1.5直接跳过此步骤，直接执行第4步*），您需要在 ``layout.html`` 文件开头处添加以下代码::
+#. 这里开始需要考虑您的Sphinx的版本问题，若 Sphinx<= 1.5，执行完此步骤后可以条过第四步，您需要在 ``layout.html`` 文件开头处添加以下代码::
     
     {# 导入布局文件 #}
     {% extends "!layout.html" %}
 
     {＃自定义CSS覆盖＃} 
     {％set bootswatch_css_custom = ['_static / my-styles.css']％}
-#. Sphinx版本>1.5的用户不用进行上述操作，而是在conf.py末尾加入::
+#. Sphinx版本>1.5的用户在上述操作的基础上，还要在conf.py末尾加入::
     
     def setup(app):
     app.add_stylesheet("my-styles.css")

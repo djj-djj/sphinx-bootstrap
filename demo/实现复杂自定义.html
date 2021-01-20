@@ -222,7 +222,7 @@ $(function () {
 <div><img alt="../_images/sta.png" src="../_images/sta.png" />
 </div></blockquote>
 </li>
-<li><p>这里开始需要考虑您的Sphinx的版本问题，若 Sphinx&lt;= 1.5（<em>若Sphinx&gt;1.5直接跳过此步骤，直接执行第4步</em>），您需要在 <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 文件开头处添加以下代码:</p>
+<li><p>这里开始需要考虑您的Sphinx的版本问题，若 Sphinx&lt;= 1.5，执行完此步骤后可以条过第四步，您需要在 <code class="docutils literal notranslate"><span class="pre">layout.html</span></code> 文件开头处添加以下代码:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{# 导入布局文件 #}
 {% extends &quot;!layout.html&quot; %}
 
@@ -231,7 +231,7 @@ $(function () {
 </pre></div>
 </div>
 </li>
-<li><p>Sphinx版本&gt;1.5的用户不用进行上述操作，而是在conf.py末尾加入:</p>
+<li><p>Sphinx版本&gt;1.5的用户在上述操作的基础上，还要在conf.py末尾加入:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_stylesheet</span><span class="p">(</span><span class="s2">&quot;my-styles.css&quot;</span><span class="p">)</span>
 <span class="c1">#此处可引入多个CSS文件</span>
